@@ -1,0 +1,8 @@
+#python program to check the age group to the given user
+n=int(input("enter the age"))
+if n<10:
+    print("child")
+elif n>=10 and n<19:
+    print("Teenage")
+else:
+    print("Adult")
