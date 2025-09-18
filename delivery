@@ -1,0 +1,188 @@
+print("Welcome to SAIRAM food delivery system")
+
+user = "abi"
+passwd = "1342"
+
+username = input("Enter your username: ")
+password = input("Enter your password: ")
+
+if username == user and password == passwd:
+    print("Login successful")
+    grand_total = 0
+
+    print("Select your items:")
+    print("1. Tiffen items")
+    print("2. Meals")
+    print("3. Juice items")
+    print("4. Snacks")
+    print("5. Dessert")
+    choices = input("Enter your choices (e.g., 1 5): ").split()
+    for choice in choices:
+        if choice == '1':
+            print("Tiffen items")
+        elif choice == '2':
+            print("Meals")
+        elif choice == '3':
+            print("Juice items")
+        elif choice == '4':
+            print("Snacks")
+        elif choice == '5':
+            print("Dessert")
+        else:
+            print(f"Invalid choice: {choice}")
+
+    n = int(input("Enter your choice: "))
+
+    if n == 1:
+        print("Tiffen items")
+        print("Select your tiffin(s) (space separated):")
+        print("1. Mysore bonda - ₹30")
+        print("2. Sambar && Idli - ₹40")
+        print("3. Egg dosa - ₹50")
+        print("4. Dosa - ₹35")
+        print("5. Puri - ₹25")
+
+        choices = input("Enter your choices (e.g., 1 5): ").split()
+
+        for choice in choices:
+            if choice == '1':
+                qty = int(input("Qty for Mysore bonda: "))
+                amount = 30 * qty
+            elif choice == '2':
+                qty = int(input("Qty for Sambar && Idli: "))
+                amount = 40 * qty
+            elif choice == '3':
+                qty = int(input("Qty for Egg dosa: "))
+                amount = 50 * qty
+            elif choice == '4':
+                qty = int(input("Qty for Dosa: "))
+                amount = 35 * qty
+            elif choice == '5':
+                qty = int(input("Qty for Puri: "))
+                amount = 25 * qty
+            else:
+                print(f"Invalid choice: {choice}")
+                amount = 0
+            grand_total += amount
+            if amount > 0:
+                print(f"Added ₹{amount} for item {choice}")
+
+    elif n == 2:
+        print("Meals")
+        print("Select your meal:")
+        print("1. Biryani with Paneer Butter Masala - ₹120")
+        print("2. Fish fry with Biryani - ₹150")
+        print("3. Fish fry - ₹100")
+        print("4. Chicken biryani - ₹130")
+        print("5. Chicken fry with Biryani - ₹160")
+
+        y = int(input("Enter your choice: "))
+        if y == 1:
+            qty = int(input("Qty for Biryani with Paneer Butter Masala: "))
+            amount = 120 * qty
+        elif y == 2:
+            qty = int(input("Qty for Fish fry with Biryani: "))
+            amount = 150 * qty
+        elif y == 3:
+            qty = int(input("Qty for Fish fry: "))
+            amount = 100 * qty
+        elif y == 4:
+            qty = int(input("Qty for Chicken biryani: "))
+            amount = 130 * qty
+        elif y == 5:
+            qty = int(input("Qty for Chicken fry with Biryani: "))
+            amount = 160 * qty
+        else:
+            print("Invalid choice")
+            amount = 0
+        grand_total += amount
+        if amount > 0:
+            print(f"Added ₹{amount} for selected meal")
+
+    elif n == 3:
+        print("Juice items")
+        print("Select your juice:")
+        print("1. Orange juice - ₹40")
+        print("2. Apple juice - ₹35")
+        print("3. Mango juice - ₹45")
+        print("4. Guava juice - ₹50")
+
+        y = int(input("Enter your choice: "))
+        if y == 1:
+            qty = int(input("Qty for Orange juice: "))
+            amount = 40 * qty
+        elif y == 2:
+            qty = int(input("Qty for Apple juice: "))
+            amount = 35 * qty
+        elif y == 3:
+            qty = int(input("Qty for Mango juice: "))
+            amount = 45 * qty
+        elif y == 4:
+            qty = int(input("Qty for Guava juice: "))
+            amount = 50 * qty
+        else:
+            print("Invalid choice")
+            amount = 0
+        grand_total += amount
+        if amount > 0:
+            print(f"Added ₹{amount} for selected juice")
+
+    elif n == 4:
+        print("Snacks")
+        print("Select your snack:")
+        print("1. Chips - ₹20")
+        print("2. Cookies - ₹30")
+        print("3. Nuts - ₹40")
+        print("4. Chocolates - ₹50")
+
+        y = int(input("Enter your choice: "))
+        if y == 1:
+            qty = int(input("Qty for Chips: "))
+            amount = 20 * qty
+        elif y == 2:
+            qty = int(input("Qty for Cookies: "))
+            amount = 30 * qty
+        elif y == 3:
+            qty = int(input("Qty for Nuts: "))
+            amount = 40 * qty
+        elif y == 4:
+            qty = int(input("Qty for Chocolates: "))
+            amount = 50 * qty
+        else:
+            print("Invalid choice")
+            amount = 0
+        grand_total += amount
+        if amount > 0:
+            print(f"Added ₹{amount} for selected snack")
+
+    elif n == 5:
+        print("Dessert")
+        print("Select your dessert:")
+        print("1. Ice cream - ₹60")
+        print("2. Laddu - ₹25")
+        print("3. Jalebi - ₹30")
+
+        y = int(input("Enter your choice: "))
+        if y == 1:
+            qty = int(input("Qty for Ice cream: "))
+            amount = 60 * qty
+        elif y == 2:
+            qty = int(input("Qty for Laddu: "))
+            amount = 25 * qty
+        elif y == 3:
+            qty = int(input("Qty for Jalebi: "))
+            amount = 30 * qty
+        else:
+            print("Invalid choice")
+            amount = 0
+        grand_total += amount
+        if amount > 0:
+            print(f"Added ₹{amount} for selected dessert")
+
+    else:
+        print("Invalid choice")
+
+    print(f"\nGrand total: ₹{grand_total}")
+
+else:
+    print("Invalid username or password")
